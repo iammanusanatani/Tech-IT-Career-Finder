@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#06080f" />
+  <title>Tech & IT Career Finder </title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="bg-stars"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <!-- ══════════════════════════════════════════
+     HOME SCREEN
+══════════════════════════════════════════ -->
+  <div class="screen active" id="homeScreen">
+    <div class="scroll-wrap">
+      <div class="inner">
+
+        <!-- Language toggle -->
+        <div class="lang-bar">
+          <button class="lang-btn active" onclick="setLang('hinglish', this)">🇮🇳 Hinglish</button>
+          <button class="lang-btn" onclick="setLang('english',  this)">🌐 English</button>
+        </div>
+
+        <div class="badge" id="hBadge">Free Career Test</div>
+
+        <h1 class="home-title">
+          <span class="grad" id="hT1">Sirf 10 Sawalon Mein Pata Karo</span><br>
+          <span id="hT2">Ki Tumhare Liye Kaun Si Tech & IT Job Best Hai!</span>
+        </h1>
+
+        <p class="home-sub" id="hSub">
+          Personality aur skills ke basis par tumhara perfect IT career reveal hoga — 100% free, no registration!
+        </p>
+        <p class="home-meta" id="hMeta">10 Questions &nbsp;•&nbsp; 2 Minute Mein Result &nbsp;•&nbsp; Top Matches</p>
+
+        <!-- Feature cards -->
+        <div class="feat-grid">
+          <div class="feat-card"><span class="feat-icon">🧠</span>
+            <div class="feat-title" id="f1t">10 Sawaal</div>
+            <div class="feat-sub" id="f1s">Personality &amp; Skills</div>
+          </div>
+          <div class="feat-card"><span class="feat-icon">⚡</span>
+            <div class="feat-title" id="f2t">Fast Result</div>
+            <div class="feat-sub" id="f2s">2 Minute Mein</div>
+          </div>
+          <div class="feat-card"><span class="feat-icon">🎯</span>
+            <div class="feat-title" id="f3t">Accurate</div>
+            <div class="feat-sub" id="f3s">Top 3 Jobs</div>
+          </div>
+          <div class="feat-card"><span class="feat-icon">💰</span>
+            <div class="feat-title" id="f4t">Salary Info</div>
+            <div class="feat-sub" id="f4s">Expected Pay</div>
+          </div>
+          <div class="feat-card"><span class="feat-icon">📚</span>
+            <div class="feat-title" id="f5t">Skills Guide</div>
+            <div class="feat-sub" id="f5s">Kya Seekhna Hoga</div>
+          </div>
+          <div class="feat-card"><span class="feat-icon">🌟</span>
+            <div class="feat-title" id="f6t">Free Test</div>
+            <div class="feat-sub" id="f6s">Koi Fees Nahi</div>
+          </div>
+        </div>
+
+        <button class="start-btn" id="startBtn" onclick="startQuiz()">Quiz Shuru Karo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+     QUIZ SCREEN
+══════════════════════════════════════════ -->
+  <div class="screen" id="quizScreen">
+    <div class="scroll-wrap">
+      <div class="quiz-inner">
+
+        <!-- Progress -->
+        <div class="prog-row">
+          <span class="prog-num" id="qNum">Question 1 / 10</span>
+          <span class="prog-pct" id="qPct">0%</span>
+        </div>
+        <div class="prog-track">
+          <div class="prog-fill" id="progFill" style="width:0%"></div>
+        </div>
+
+        <!-- Question card -->
+        <div class="q-card anim" id="qCard">
+          <div class="q-num" id="qLbl">Q1</div>
+          <div class="q-text" id="qTxt"></div>
+        </div>
+
+        <!-- Options -->
+        <div class="opts anim" id="optsWrap"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+     RESULT SCREEN
+══════════════════════════════════════════ -->
+  <div class="screen" id="resultScreen">
+    <div class="scroll-wrap">
+      <div class="res-wrap anim" id="resDiv"></div>
+    </div>
+  </div>
+
+  <div class="founder" id="hBadge"><strong>Founder & Developer : <a href="">Manu Kumar</a></strong></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
